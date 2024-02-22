@@ -1,0 +1,8 @@
+{
+	"Title": "Professional README Generator",
+	"Description": "A command-line application that accepts user input and generates a professional grade README for the user so they can spend more time developing their project.",
+	"Installation": "To install this application, please refer to the project ReadME located at https://github.com/JoshMassa/professional-readme-generator",
+	"Usage": "This application has unlimited free use.",
+	"Contributing": "To make contributions, please refer to this projects README.",
+	"Tests": "Further testing is not required."
+}
