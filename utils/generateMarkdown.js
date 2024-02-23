@@ -50,6 +50,7 @@ ${data.Description}
 - [Contributing](#contributing)
 - [Tests](#tests)
 - [Questions](#questions)
+- [Credits](#credits)
 - [License](#license)
 ## Installation
 ${data.Installation}

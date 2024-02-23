@@ -7,6 +7,7 @@ A command-line application that accepts user input and generates a professional 
 - [Contributing](#contributing)
 - [Tests](#tests)
 - [Questions](#questions)
+- [Credits](#credits)
 - [License](#license)
 ## Installation
 To install this project, please refer to the tutorial video included in this README.
