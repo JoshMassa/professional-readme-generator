@@ -32,8 +32,15 @@ function renderLicenseSection(license) {
     return `## License
 This project is covered by ${'&nbsp;'.repeat(2)}${renderLicenseBadge(license)}`;
   } else {
-      return `## License 
-This project is not covered by a license.`;
+      return "";
+  }
+}
+
+function renderLicenseToContents(license) {
+  if (license !== 'None') {
+    return `- [License](#license)`
+  } else {
+    return "";
   }
 }
 
@@ -51,7 +58,7 @@ ${data.Description}
 - [Tests](#tests)
 - [Questions](#questions)
 - [Credits](#credits)
-- [License](#license)
+${renderLicenseToContents(`${data.License}`)}
 ## Installation
 ${data.Installation}
 ## Usage
