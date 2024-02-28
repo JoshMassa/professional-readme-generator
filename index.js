@@ -34,16 +34,24 @@ const questions = [
         name: 'Contributing',
         message: 'Please enter your contribution guidelines: ',
         validate: (value) => value ? true : `\x1b[31mPlease enter contribution guidelines for your project. If there are none, please enter 'none'.\x1b[0m`,
+        filter: (value) => value.replace(/\\n/g, '\n'),
     },
     {
         type: 'input',
         name: 'Tests',
         message: 'Please enter any instructions for testing: ',
         validate: (value) => value ? true : `\x1b[31mPlease enter instructions for testing your project. If there are none, please enter 'none'.\x1b[0m`,
+        filter: (value) => value.replace(/\\n/g, '\n'),
     },
     {
         type: 'input',
-        name: 'Questions',
+        name: 'GitHubUsername',
+        message: 'Please enter your GitHub username: ',
+        validate: (value) => value ? true : `\x1b[31mPlease enter your GitHub username.\x1b[0m`,
+    },
+    {
+        type: 'input',
+        name: 'Email',
         message: 'Please enter your Email address: ',
         validate: (value) => value ? true : `\x1b[31mPlease enter a valid email address to ensure users can reach out to you with any questions. If you prefer not to add your email, enter 'N/A'.\x1b[0m`,
     },
@@ -64,7 +72,7 @@ const questions = [
 // TODO: Create a function to write README file
 const writeReadme = (data) => {
     const readmeContent = generateMarkdown(data);
-        fs.writeFile('GENERATEDREADME.md', readmeContent, (err) => {
+        fs.writeFile('README.md', readmeContent, (err) => {
             err ? console.error(err) : console.log(`\x1b[36m${'Your README.md file has been created successfully!'}\x1b[0m`);
     });
         console.log(`\x1b[35m${'Your answers were: '}\x1b[0m`, data);

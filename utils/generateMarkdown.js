@@ -47,7 +47,9 @@ function renderLicenseToContents(license) {
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
   const createEmailLink = (emailAddress) => {return `mailto:${emailAddress}`;}
-  const emailLink = createEmailLink(data.Questions);
+  const emailLink = createEmailLink(data.Email);
+  const createGithubLink = (userName) => {return `https://www.github.com/${userName}`}
+  const githubLink = createGithubLink(data.GitHubUsername)
   return `# ${data.Title} ${renderLicenseBadge(data.License)}
 ## Description
 ${data.Description}
@@ -68,6 +70,7 @@ ${data.Contributing}
 ## Tests
 ${data.Tests}
 ## Questions
+You can find my GitHub profile [here](${githubLink}). \n
 If you have any questions, you can email me by clicking [here](${emailLink}).
 ## Credits
 ${data.Credits}
